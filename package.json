@@ -1,0 +1,54 @@
+{
+  "name": "[name]",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "funding": "https://github.com/sponsors/antfu",
+  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "bugs": {
+    "url": "https://github.com/antfu/[name]/issues"
+  },
+  "homepage": "https://github.com/antfu/[name]#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antfu/[name].git"
+  },
+  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepublishOnly": "nr build",
+    "dev": "nr build --watch",
+    "start": "esno src/index.ts",
+    "build": "tsup src/index.ts --format cjs,esm --dts --no-splitting",
+    "release": "bumpp --commit --push --tag && pnpm publish",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "nr lint -- --fix",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.7.0",
+    "@antfu/ni": "^0.7.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.12",
+    "bumpp": "^6.0.6",
+    "eslint": "^7.32.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "esno": "^0.8.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.4",
+    "tsup": "^4.13.1",
+    "typescript": "^4.3.5"
+  }
+}
