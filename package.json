@@ -34,7 +34,7 @@
     "release": "bumpp --commit --push --tag && pnpm publish",
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "nr lint -- --fix",
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.7.0",
@@ -52,6 +52,8 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
-    "got": "^11.8.2"
+    "got": "^11.8.2",
+    "p-props": "^5.0.0",
+    "tall": "^4.0.1"
   }
 }
