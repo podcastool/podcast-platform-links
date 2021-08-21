@@ -4,5 +4,7 @@
   },
   "extends": ["@antfu"],
   "plugins": ["jest"],
-  "rules": {}
+  "rules": {
+    "no-console": "off"
+  }
 }
