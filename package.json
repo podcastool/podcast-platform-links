@@ -1,5 +1,5 @@
 {
-  "name": "podcast-feed-link",
+  "name": "podcast-platform-links",
   "version": "0.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -15,12 +15,12 @@
   "license": "MIT",
   "sideEffects": false,
   "bugs": {
-    "url": "https://github.com/sinchang/podcast-feed-link/issues"
+    "url": "https://github.com/podcastool/podcast-platform-links/issues"
   },
-  "homepage": "https://github.com/sinchang/podcast-feed-link#readme",
+  "homepage": "https://github.com/podcastool/podcast-platform-links#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sinchang/podcast-feed-link.git"
+    "url": "git+https://github.com/podcastool/podcast-platform-links.git"
   },
   "keywords": [],
   "files": [
