@@ -1,6 +1,6 @@
-import { getPodacstPlatformLinks, PodcastPlatformLinkItem } from '../src'
+import { getPodcastPlatformLinks, PodcastPlatformLinkItem } from '../src'
 
-describe('getPodacstPlatformLinks', () => {
+describe('getPodcastPlatformLinks', () => {
   it('should work', async() => {
     const expectResult: PodcastPlatformLinkItem[] = [
       {
@@ -57,7 +57,7 @@ describe('getPodacstPlatformLinks', () => {
       },
       { platform: 'Sonnet', link: 'https://sonnet.fm/p/1088178402' },
     ]
-    const actualResult = await getPodacstPlatformLinks(1088178402)
+    const actualResult = await getPodcastPlatformLinks(1088178402)
     expect(actualResult).toEqual(expectResult)
   })
 })

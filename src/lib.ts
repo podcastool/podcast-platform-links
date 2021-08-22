@@ -1,7 +1,7 @@
 import { getFeedUrl, base64Encode } from './internal'
 import { PodcastPlatformLinkItem } from './types'
 
-export const getPodacstPlatformLinks = async(
+export const getPodcastPlatformLinks = async(
   appleId: number,
 ): Promise<PodcastPlatformLinkItem[]> => {
   const feedUrl = await getFeedUrl(appleId)
