@@ -8,73 +8,73 @@ export const getPodacstPlatformLinks = async(
 
   return [
     {
-      platform: 'apple',
+      platform: 'Apple Podcasts',
       link: `https://podcasts.apple.com/podcast/id${appleId}`,
     },
     {
-      platform: 'breaker',
+      platform: 'Breaker',
       link: `https://breaker.audio/shows?feed_url=${encodeURIComponent(
         feedUrl,
       )}`,
     },
     {
-      platform: 'bullhorn',
+      platform: 'Bullhorn',
       link: `https://bullhorn.fm/podchaser/itunes/${appleId}`,
     },
     {
-      platform: 'castbox',
+      platform: 'Castbox',
       link: `https://castbox.fm/vic/${appleId}`,
     },
     {
-      platform: 'castro',
+      platform: 'Castro',
       link: `https://castro.fm/itunes/${appleId}`,
     },
     {
-      platform: 'google',
+      platform: 'Google Podcasts',
       link: `https://podcasts.google.com/?feed=${base64Encode(feedUrl)}`,
     },
     {
-      platform: 'overcast',
+      platform: 'Overcast',
       link: `https://overcast.fm/itunes${appleId}`,
     },
     {
-      platform: 'player',
+      platform: 'Player FM',
       link: `https://player.fm/series/${encodeURIComponent(feedUrl)}`,
     },
     {
-      platform: 'pocketcasts',
+      platform: 'Pocket Casts',
       link: `https://pca.st/itunes/${appleId}`,
     },
     {
-      platform: 'podbean',
+      platform: 'Podbean',
       link: `https://podbean.com/play/${encodeURIComponent(feedUrl)}`,
     },
     {
-      platform: 'podcastaddict',
+      platform: 'Podcast Addict',
       link: `https://podcastaddict.com/feed/${encodeURIComponent(feedUrl)}`,
     },
     {
-      platform: 'podcastguru',
+      platform: 'Podcast Guru',
       link: `https://app.podcastguru.io/podcast/${appleId}`,
     },
     {
-      platform: 'podfriend',
+      platform: 'Podfriend',
       link: `https://web.podfriend.com/podcast/${appleId}`,
     },
     {
-      platform: 'podhero',
+      platform: 'Podhero',
       link: `https://podhero.com/podcast/feed/${encodeURIComponent(feedUrl)}`,
     },
     {
-      platform: 'podknife',
+      platform: 'Podknife',
       link: `https://podknife.com/podcast?feed_url=${appleId}`,
     },
     {
-      platform: 'radiopublic',
+      platform: 'RadioPublic',
       link: `https://radiopublic.com/${encodeURIComponent(feedUrl)}`,
     },
     {
-      platform: 'sonnet',
+      platform: 'Sonnet',
       link: `https://sonnet.fm/p/${appleId}`,
     },
   ]
