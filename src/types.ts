@@ -1,13 +1,13 @@
-export interface SearchResultItem {
-  feedId: string
-  href: string
-  id: number
-  image: string
-  ownerName: string
-  title: string
+interface PodcastLookupResultItem {
+  feedUrl: string
 }
 
-export interface FeedLinkItem {
+export interface PodcastLookupResult {
+  resultCount: number
+  results: PodcastLookupResultItem[]
+}
+
+export interface PodcastPlatformLinkItem {
   platform: string
-  url: string
+  link: string
 }

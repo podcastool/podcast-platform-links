@@ -1,58 +1,63 @@
-import { getFeedId, getOriginalFeedLinks } from '../src/internal'
-import { getFeedLinks } from '../src'
-
-describe('getFeedId', () => {
-  it('should work', async() => {
-    const expectResult = 1453346141
-    const actualResult = await getFeedId('海螺电台')
-    expect(actualResult).toEqual(expectResult)
-  })
-})
+import { getPodacstPlatformLinks } from '../src'
 
 describe('getOriginalFeedLinks', () => {
   it('should work', async() => {
     const expectResult = [
-      { platform: 'apple', url: 'https://pod.link/1453346141.apple' },
-      { platform: 'spotify', url: 'https://pod.link/1453346141.spotify' },
-      { platform: 'google', url: 'https://pod.link/1453346141.google' },
-      { platform: 'overcast', url: 'https://pod.link/1453346141.overcast' },
-      { platform: 'stitcher', url: 'https://pod.link/1453346141.stitcher' },
-      { platform: 'castbox', url: 'https://pod.link/1453346141.castbox' },
-      { platform: 'castro', url: 'https://pod.link/1453346141.castro' },
+      {
+        platform: 'apple',
+        link: 'https://podcasts.apple.com/podcast/id1088178402',
+      },
+      {
+        platform: 'breaker',
+        link: 'https://breaker.audio/shows?feed_url=https%3A%2F%2Fcrazy.capital%2Ffeed',
+      },
+      {
+        platform: 'bullhorn',
+        link: 'https://bullhorn.fm/podchaser/itunes/1088178402',
+      },
+      { platform: 'castbox', link: 'https://castbox.fm/vic/1088178402' },
+      { platform: 'castro', link: 'https://castro.fm/itunes/1088178402' },
+      {
+        platform: 'google',
+        link: 'https://podcasts.google.com/?feed=aHR0cHM6Ly9jcmF6eS5jYXBpdGFsL2ZlZWQ=',
+      },
+      { platform: 'overcast', link: 'https://overcast.fm/itunes1088178402' },
+      {
+        platform: 'player',
+        link: 'https://player.fm/series/https%3A%2F%2Fcrazy.capital%2Ffeed',
+      },
+      { platform: 'pocketcasts', link: 'https://pca.st/itunes/1088178402' },
+      {
+        platform: 'podbean',
+        link: 'https://podbean.com/play/https%3A%2F%2Fcrazy.capital%2Ffeed',
+      },
       {
         platform: 'podcastaddict',
-        url: 'https://pod.link/1453346141.podcastaddict',
+        link: 'https://podcastaddict.com/feed/https%3A%2F%2Fcrazy.capital%2Ffeed',
       },
       {
-        platform: 'pocketcasts',
-        url: 'https://pod.link/1453346141.pocketcasts',
+        platform: 'podcastguru',
+        link: 'https://app.podcastguru.io/podcast/1088178402',
       },
       {
-        platform: 'iheartradio',
-        url: 'https://pod.link/1453346141.iheartradio',
+        platform: 'podfriend',
+        link: 'https://web.podfriend.com/podcast/1088178402',
       },
-      { platform: 'playerfm', url: 'https://pod.link/1453346141.playerfm' },
-      { platform: 'breaker', url: 'https://pod.link/1453346141.breaker' },
+      {
+        platform: 'podhero',
+        link: 'https://podhero.com/podcast/feed/https%3A%2F%2Fcrazy.capital%2Ffeed',
+      },
+      {
+        platform: 'podknife',
+        link: 'https://podknife.com/podcast?feed_url=1088178402',
+      },
       {
         platform: 'radiopublic',
-        url: 'https://pod.link/1453346141.radiopublic',
+        link: 'https://radiopublic.com/https%3A%2F%2Fcrazy.capital%2Ffeed',
       },
-      { platform: 'rss', url: 'https://pod.link/1453346141.rss' },
+      { platform: 'sonnet', link: 'https://sonnet.fm/p/1088178402' },
     ]
-    const actualResult = await getOriginalFeedLinks(1453346141)
+    const actualResult = await getPodacstPlatformLinks(1088178402)
     expect(actualResult).toEqual(expectResult)
-  })
-
-  it('id is wrong | return []', async() => {
-    const expectResult: any[] = []
-    const actualResult = await getOriginalFeedLinks(123456)
-    expect(actualResult).toEqual(expectResult)
-  })
-})
-
-describe('getFeedLinks', () => {
-  it('should work', async() => {
-    const actualResult = await getFeedLinks('海螺电台')
-    expect(actualResult).toHaveProperty('spotify', 'https://open.spotify.com/show/2dmXaTPuhzANPVsNsjeVIH')
   })
 })

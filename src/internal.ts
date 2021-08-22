@@ -1,39 +1,20 @@
-import cheerio, { Cheerio, Node } from 'cheerio'
-import got from 'got'
-import { FeedLinkItem, SearchResultItem } from './types'
+import ky from 'ky-universal'
+import { PodcastLookupResult } from './types'
 
-const API_URL = 'https://pod.link'
+const API_URL = ' https://itunes.apple.com'
 
-export async function getFeedId(name: string): Promise<number> {
-  const data = await got(`${API_URL}/search?query=${name}`).json<
-  SearchResultItem[]
-  >()
-  return Array.isArray(data) && data.length > 0 ? data[0].id : 0
+export async function getFeedUrl(appleId: number): Promise<string> {
+  const data = await ky(
+    `${API_URL}/lookup?id=${appleId}`,
+  ).json<PodcastLookupResult>()
+  return data.resultCount > 0 ? data.results[0].feedUrl : ''
 }
 
-export async function getOriginalFeedLinks(id: number): Promise<FeedLinkItem[]> {
-  if (!id) return []
-
-  const html = await got(`${API_URL}/${id}`).text()
-  const $ = cheerio.load(html)
-  const selector = `a[href^="/${id}"]`
-  const linkElements: Cheerio<Node> = $(selector)
-
-  if (!linkElements.length) return []
-
-  const feeds: FeedLinkItem[] = []
-
-  Array.from(linkElements).forEach((element) => {
-    const endUrl = $(element).attr('href')
-    const platform = endUrl?.split('.')[1]
-
-    if (platform) {
-      feeds.push({
-        url: API_URL + endUrl,
-        platform,
-      })
-    }
-  })
-
-  return feeds
+export const universalBtoa = (str: string): string => {
+  try {
+    return btoa(str)
+  }
+  catch (err) {
+    return Buffer.from(str).toString('base64')
+  }
 }
