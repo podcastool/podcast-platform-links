@@ -1,6 +1,6 @@
 import { getPodacstPlatformLinks } from '../src'
 
-describe('getOriginalFeedLinks', () => {
+describe('getPodacstPlatformLinks', () => {
   it('should work', async() => {
     const expectResult = [
       {
