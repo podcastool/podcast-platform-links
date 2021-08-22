@@ -7,7 +7,26 @@ export interface PodcastLookupResult {
   results: PodcastLookupResultItem[]
 }
 
+export type Platform =
+  | 'apple'
+  | 'breaker'
+  | 'bullhorn'
+  | 'castbox'
+  | 'castro'
+  | 'google'
+  | 'overcast'
+  | 'player'
+  | 'pocketcasts'
+  | 'podbean'
+  | 'podcastaddict'
+  | 'podcastguru'
+  | 'podfriend'
+  | 'podhero'
+  | 'podknife'
+  | 'radiopublic'
+  | 'sonnet'
+
 export interface PodcastPlatformLinkItem {
-  platform: string
+  platform: Platform
   link: string
 }

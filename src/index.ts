@@ -1,5 +1,10 @@
 import { getFeedUrl, universalBtoa } from './internal'
-import { PodcastPlatformLinkItem } from './types'
+import { PodcastPlatformLinkItem, Platform } from './types'
+
+export type {
+  PodcastPlatformLinkItem,
+  Platform,
+}
 
 export const getPodacstPlatformLinks = async(
   appleId: number,

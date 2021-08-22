@@ -22,7 +22,26 @@
     "type": "git",
     "url": "git+https://github.com/podcastool/podcast-platform-links.git"
   },
-  "keywords": [],
+  "keywords": [
+    "apple",
+    "breaker",
+    "bullhorn",
+    "castbox",
+    "castro",
+    "google",
+    "overcast",
+    "player",
+    "pocketcasts",
+    "podbean",
+    "podcastaddict",
+    "podcastguru",
+    "podfriend",
+    "podhero",
+    "podknife",
+    "radiopublic",
+    "sonnet",
+    "podcast"
+  ],
   "files": [
     "dist"
   ],
