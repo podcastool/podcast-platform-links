@@ -1,4 +1,4 @@
-import { getFeedUrl, universalBtoa } from './internal'
+import { getFeedUrl, base64Encode } from './internal'
 import { PodcastPlatformLinkItem } from './types'
 
 export const getPodacstPlatformLinks = async(
@@ -31,7 +31,7 @@ export const getPodacstPlatformLinks = async(
     },
     {
       platform: 'google',
-      link: `https://podcasts.google.com/?feed=${universalBtoa(feedUrl)}`,
+      link: `https://podcasts.google.com/?feed=${base64Encode(feedUrl)}`,
     },
     {
       platform: 'overcast',
