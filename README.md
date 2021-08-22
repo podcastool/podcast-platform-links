@@ -11,7 +11,7 @@ $ npm install podcast-platform-links
 ## Usage
 
 ```
-import { getPodacstPlatformLinks } from 'podcast-platform-links';
+import getPodacstPlatformLinks from 'podcast-platform-links';
 
 const data = await getPodacstPlatformLinks(1088178402);
 ```
