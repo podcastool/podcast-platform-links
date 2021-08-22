@@ -1,6 +1,10 @@
 # podcast-platform-links
 
+> Grab podcast subscribe link on multiple platforms. 
+
 [![NPM version](https://img.shields.io/npm/v/podcast-platform-links?color=a1b858&label=)](https://www.npmjs.com/package/podcast-platform-links)
+
+Note: This library is built for Node.js.
 
 ## Install
 

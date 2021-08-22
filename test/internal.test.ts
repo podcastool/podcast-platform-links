@@ -1,4 +1,4 @@
-import { getFeedUrl, universalBtoa } from '../src/internal'
+import { getFeedUrl, base64Encode } from '../src/internal'
 
 describe('getFeedUrl', () => {
   it('should work', async() => {
@@ -8,19 +8,10 @@ describe('getFeedUrl', () => {
   })
 })
 
-describe('universalBtoa', () => {
+describe('base64Encode', () => {
   it('should work on Node env', () => {
     const expectResult = 'cG9kY2FzdA=='
-    const actualResult = universalBtoa('podcast')
-    expect(actualResult).toEqual(expectResult)
-  })
-
-  /**
-   * @jest-environment jsdom
-   */
-  it('should work on Browser env', () => {
-    const expectResult = 'cG9kY2FzdA=='
-    const actualResult = universalBtoa('podcast')
+    const actualResult = base64Encode('podcast')
     expect(actualResult).toEqual(expectResult)
   })
 })
