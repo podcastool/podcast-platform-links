@@ -1,5 +1,5 @@
 {
-  "name": "podcast-feed-link",
+  "name": "podcast-platform-links",
   "version": "0.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -15,14 +15,33 @@
   "license": "MIT",
   "sideEffects": false,
   "bugs": {
-    "url": "https://github.com/sinchang/podcast-feed-link/issues"
+    "url": "https://github.com/podcastool/podcast-platform-links/issues"
   },
-  "homepage": "https://github.com/sinchang/podcast-feed-link#readme",
+  "homepage": "https://github.com/podcastool/podcast-platform-links#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sinchang/podcast-feed-link.git"
+    "url": "git+https://github.com/podcastool/podcast-platform-links.git"
   },
-  "keywords": [],
+  "keywords": [
+    "apple",
+    "breaker",
+    "bullhorn",
+    "castbox",
+    "castro",
+    "google",
+    "overcast",
+    "player",
+    "pocketcasts",
+    "podbean",
+    "podcastaddict",
+    "podcastguru",
+    "podfriend",
+    "podhero",
+    "podknife",
+    "radiopublic",
+    "sonnet",
+    "podcast"
+  ],
   "files": [
     "dist"
   ],
@@ -34,7 +53,7 @@
     "release": "bumpp --commit --push --tag && pnpm publish",
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "nr lint -- --fix",
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.7.0",
@@ -51,7 +70,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.10",
-    "got": "^11.8.2"
+    "ky": "^0.28.5",
+    "ky-universal": "^0.9.1"
   }
 }
