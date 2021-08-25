@@ -1,5 +1,5 @@
 import got from 'got'
-import pick from 'lodash-es/pick'
+import pick from 'lodash/pick'
 import { PodcastLookupResult, PodcastLookupResultItem } from './types'
 
 const API_URL = 'https://itunes.apple.com'
