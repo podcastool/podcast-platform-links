@@ -1,5 +1,10 @@
-interface PodcastLookupResultItem {
+export interface PodcastLookupResultItem {
   feedUrl: string
+  artistName: string
+  collectionId: number
+  collectionName: string
+  collectionViewUrl: string
+  artworkUrl600: string
 }
 
 export interface PodcastLookupResult {
@@ -29,4 +34,9 @@ export type Platform =
 export interface PodcastPlatformLinkItem {
   platform: Platform
   link: string
+}
+
+export interface PodcastPlatformLinkData {
+  meta: PodcastLookupResultItem
+  links: PodcastPlatformLinkItem[]
 }
