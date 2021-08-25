@@ -30,6 +30,7 @@ export type Platform =
   | 'Podknife'
   | 'RadioPublic'
   | 'Sonnet'
+  | 'Spotify'
 
 export interface PodcastPlatformLinkItem {
   platform: Platform
