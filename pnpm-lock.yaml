@@ -4,6 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.7.0
   '@antfu/ni': ^0.7.0
   '@types/jest': ^26.0.24
+  '@types/lodash-es': ^4.17.4
   '@types/node': ^16.4.12
   bumpp: ^6.0.6
   eslint: ^7.32.0
@@ -11,17 +12,20 @@ specifiers:
   esno: ^0.8.0
   got: ^11.8.2
   jest: ^27.0.6
+  lodash-es: ^4.17.21
   ts-jest: ^27.0.4
   tsup: ^4.13.1
   typescript: ^4.3.5
 
 dependencies:
   got: 11.8.2
+  lodash-es: 4.17.21
 
 devDependencies:
   '@antfu/eslint-config': 0.7.0_eslint@7.32.0+typescript@4.3.5
   '@antfu/ni': 0.7.0
   '@types/jest': 26.0.24
+  '@types/lodash-es': 4.17.4
   '@types/node': 16.4.12
   bumpp: 6.0.6
   eslint: 7.32.0
@@ -827,6 +831,16 @@ packages:
     dependencies:
       '@types/node': 16.4.12
     dev: false
+
+  /@types/lodash-es/4.17.4:
+    resolution: {integrity: sha512-BBz79DCJbD2CVYZH67MBeHZRX++HF+5p8Mo5MzjZi64Wac39S3diedJYHZtScbRVf4DjZyN6LzA0SB0zy+HSSQ==}
+    dependencies:
+      '@types/lodash': 4.14.172
+    dev: true
+
+  /@types/lodash/4.14.172:
+    resolution: {integrity: sha512-/BHF5HAx3em7/KkzVKm3LrsD6HZAXuXO1AJZQ3cRRBZj4oHZDviWPYu0aEplAqDFNHZPW6d3G7KN+ONcCCC7pw==}
+    dev: true
 
   /@types/node/14.14.28:
     resolution: {integrity: sha512-lg55ArB+ZiHHbBBttLpzD07akz0QPrZgUODNakeC09i62dnrywr9mFErHuaPlB6I7z+sEbK+IYmplahvplCj2g==}
@@ -3561,6 +3575,10 @@ packages:
     dependencies:
       p-locate: 4.1.0
     dev: true
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
 
   /lodash.camelcase/4.3.0:
     resolution: {integrity: sha1-soqmKIorn8ZRA1x3EfZathkDMaY=}
