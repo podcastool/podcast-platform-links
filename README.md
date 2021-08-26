@@ -17,7 +17,7 @@ $ npm install podcast-platform-links
 ```
 import getPodcastPlatformLinks from 'podcast-platform-links';
 
-const data = await getPodcastPlatformLinks(1088178402);
+const data = await getPodcastPlatformLinks(1088178402, 'https://crazy.capital/feed');
 ```
 
 ## Thanks
