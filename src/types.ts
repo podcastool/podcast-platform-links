@@ -1,17 +1,3 @@
-export interface PodcastLookupResultItem {
-  feedUrl: string
-  artistName: string
-  collectionId: number
-  collectionName: string
-  collectionViewUrl: string
-  artworkUrl600: string
-}
-
-export interface PodcastLookupResult {
-  resultCount: number
-  results: PodcastLookupResultItem[]
-}
-
 export type Platform =
   | 'Apple Podcasts'
   | 'Breaker'
@@ -35,9 +21,4 @@ export type Platform =
 export interface PodcastPlatformLinkItem {
   platform: Platform
   link: string
-}
-
-export interface PodcastPlatformLinkData {
-  meta: PodcastLookupResultItem
-  links: PodcastPlatformLinkItem[]
 }

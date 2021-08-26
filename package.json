@@ -53,25 +53,20 @@
     "release": "bumpp --commit --push --tag && pnpm publish",
     "lint": "eslint \"{src,test}/**/*.ts\"",
     "lint:fix": "nr lint -- --fix",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+    "test": "jest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.7.0",
     "@antfu/ni": "^0.7.0",
     "@types/jest": "^26.0.24",
-    "@types/lodash": "^4.14.172",
-    "@types/node": "^16.4.12",
+    "@types/node": "^16.7.2",
     "bumpp": "^6.0.6",
     "eslint": "^7.32.0",
     "eslint-plugin-jest": "^24.4.0",
     "esno": "^0.8.0",
     "jest": "^27.0.6",
-    "ts-jest": "^27.0.4",
-    "tsup": "^4.13.1",
+    "ts-jest": "^27.0.5",
+    "tsup": "^4.14.0",
     "typescript": "^4.3.5"
-  },
-  "dependencies": {
-    "got": "^11.8.2",
-    "lodash": "^4.17.21"
   }
 }
