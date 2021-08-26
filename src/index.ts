@@ -1,5 +1,5 @@
 import { getPodcastPlatformLinks } from './lib'
-import { Platform, PodcastPlatformLinkItem, PodcastPlatformLinkData, PodcastLookupResultItem } from './types'
+import { Platform, PodcastPlatformLinkItem } from './types'
 
 export default getPodcastPlatformLinks
-export { PodcastPlatformLinkItem, Platform, PodcastPlatformLinkData, PodcastLookupResultItem, getPodcastPlatformLinks }
+export { PodcastPlatformLinkItem, Platform, getPodcastPlatformLinks }
