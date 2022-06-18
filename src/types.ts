@@ -1,6 +1,5 @@
 export type Platform =
   | 'Apple Podcasts'
-  | 'Breaker'
   | 'Bullhorn'
   | 'Castbox'
   | 'Castro'
