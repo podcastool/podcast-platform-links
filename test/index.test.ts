@@ -48,9 +48,11 @@ describe('getPodcastPlatformLinks', () => {
         link: 'https://radiopublic.com/https%3A%2F%2Fcrazy.capital%2Ffeed',
       },
       { platform: 'Sonnet', link: 'https://sonnet.fm/p/1088178402' },
-      { platform: 'Momento', link: 'https://momento.fm/pod/1088178402' },
     ]
-    const actualResult = await getPodcastPlatformLinks(1088178402, 'https://crazy.capital/feed')
+    const actualResult = await getPodcastPlatformLinks(
+      1088178402,
+      'https://crazy.capital/feed',
+    )
     expect(actualResult).toEqual(expectResult)
   })
 })

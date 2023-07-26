@@ -16,7 +16,6 @@ export type Platform =
   | 'RadioPublic'
   | 'Sonnet'
   | 'Spotify'
-  | 'Momento'
 
 export interface PodcastPlatformLinkItem {
   platform: Platform

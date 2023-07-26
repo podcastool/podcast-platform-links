@@ -66,9 +66,5 @@ export const getPodcastPlatformLinks = async(
       platform: 'Sonnet',
       link: `https://sonnet.fm/p/${itunesId}`,
     },
-    {
-      platform: 'Momento',
-      link: `https://momento.fm/pod/${itunesId}`,
-    },
   ]
 }
