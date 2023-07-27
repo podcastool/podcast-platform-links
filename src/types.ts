@@ -16,6 +16,13 @@ export type Platform =
   | 'RadioPublic'
   | 'Sonnet'
   | 'Spotify'
+  | 'Antennapod'
+  | 'Anytime Player'
+  | 'Goodpods'
+  | 'gpodder'
+  | 'Moon FM'
+  | 'podStation'
+  | 'Podvine'
 
 export interface PodcastPlatformLinkItem {
   platform: Platform

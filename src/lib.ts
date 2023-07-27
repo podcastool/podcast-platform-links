@@ -66,5 +66,33 @@ export const getPodcastPlatformLinks = (
       platform: 'Sonnet',
       link: `https://sonnet.fm/p/${itunesId}`,
     },
+    {
+      platform: 'Antennapod',
+      link: `https://antennapod.org/deeplink/subscribe?url=${feedUrl}`,
+    },
+    {
+      platform: 'Anytime Player',
+      link: `https://anytimeplayer.app/subscribe?url=${feedUrl}`,
+    },
+    {
+      platform: 'Moon FM',
+      link: `https://moon.fm/itunes/${itunesId}`,
+    },
+    {
+      platform: 'Goodpods',
+      link: `https://www.goodpods.com/podcasts-aid/${itunesId}`,
+    },
+    {
+      platform: 'gpodder',
+      link: `http://gpodder.net/subscribe?url=${feedUrl}`,
+    },
+    {
+      platform: 'Podvine',
+      link: `https://podvine.com/link?feed=${feedUrl}`,
+    },
+    {
+      platform: 'podStation',
+      link: `https://podstation.github.io/subscribe-ext/?feedUrl=${itunesId}`,
+    },
   ]
 }
