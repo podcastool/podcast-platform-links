@@ -1,10 +1,10 @@
 import { base64Encode } from './internal'
 import { PodcastPlatformLinkItem } from './types'
 
-export const getPodcastPlatformLinks = async(
+export const getPodcastPlatformLinks = (
   itunesId: number,
   feedUrl: string,
-): Promise<PodcastPlatformLinkItem[]> => {
+): PodcastPlatformLinkItem[] => {
   return [
     {
       platform: 'Apple Podcasts',
