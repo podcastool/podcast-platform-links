@@ -11,7 +11,6 @@ export type Platform =
   | 'Podcast Addict'
   | 'Podcast Guru'
   | 'Podfriend'
-  | 'Podhero'
   | 'Podknife'
   | 'RadioPublic'
   | 'Sonnet'

@@ -55,10 +55,6 @@ export const getPodcastPlatformLinks = (
       link: `https://web.podfriend.com/podcast/${itunesId}`,
     },
     {
-      platform: 'Podhero',
-      link: `https://podhero.com/podcast/feed/${encodeURIComponent(feedUrl)}`,
-    },
-    {
       platform: 'RadioPublic',
       link: `https://radiopublic.com/${encodeURIComponent(feedUrl)}`,
     },

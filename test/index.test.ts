@@ -40,10 +40,6 @@ describe('getPodcastPlatformLinks', () => {
         link: 'https://web.podfriend.com/podcast/1088178402',
       },
       {
-        platform: 'Podhero',
-        link: 'https://podhero.com/podcast/feed/https%3A%2F%2Fcrazy.capital%2Ffeed',
-      },
-      {
         platform: 'RadioPublic',
         link: 'https://radiopublic.com/https%3A%2F%2Fcrazy.capital%2Ffeed',
       },
@@ -78,7 +74,6 @@ describe('getPodcastPlatformLinks', () => {
       1088178402,
       'https://crazy.capital/feed',
     )
-    console.log(actualResult)
     expect(actualResult).toEqual(expectResult)
   })
 })
